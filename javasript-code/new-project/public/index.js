@@ -1,7 +1,16 @@
 (() => {
   // src/index.js
-  document.addEventListener("DOMContentLoaded", main);
-  function main() {
-    console.log("Hello");
-  }
+  submit.addEventListener("click", function(event) {
+    event.preventDefault();
+    let a = document.querySelector("#name");
+    const name = a.value;
+    console.log(name);
+    let b = document.querySelector("#password");
+    const pas = b.value;
+    console.log(pas);
+    const tr = {
+      password: pas,
+      name
+    };
+  });
 })();

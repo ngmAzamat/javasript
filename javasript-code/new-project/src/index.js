@@ -1,17 +1,13 @@
-// document.getElementById("inputus").addEventListener("submit", function (event) {
-//   event.preventDefault();
-//   let a = document.querySelector("#input");
-//   const MMM = a.value;
-//   console.log(MMM);
-//   const title = document.getElementById("name");
-//   title.textContent = a.value;
-//   // title.innerHTML = "<i>html<i>";
-//   // title.insertAdjacentHTML("beforeend", " из увожаемой династии");
-//   title.insertAdjacentHTML("beforebegin", " из увожаемой династии");
-// });
-
-document.addEventListener("DOMContentLoaded", main);
-
-function main() {
-  console.log("Hello");
-}
+submit.addEventListener("click", function (event) {
+  event.preventDefault();
+  let a = document.querySelector("#name");
+  const name = a.value;
+  console.log(name);
+  let b = document.querySelector("#password");
+  const pas = b.value;
+  console.log(pas);
+  const tr = {
+    password: pas,
+    name: name,
+  };
+});
