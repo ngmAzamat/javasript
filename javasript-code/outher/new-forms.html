@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Youtube</title>
+        <link rel="icon" href="/home/azamat/html/youtube/geo/pngwing.com.png" type="image/x-icon"><link rel="stylesheet" href="new-forms.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="account">
+                <span class="borderline"></span>
+                <form id="main-form" method="post">
+                    <h1>Войти</h1>
+                    <div class="form-group">
+                        <span>Имя</span>
+
+                        <input class="input" type="text" placeholder="" id="name" required minlength="5" maxlength="10" pattern="[а-яА-Я]+" title="имя должно содержать только Английский и Русские Буквы">
+                        <i></i>
+                    </div>
+                    <div class="form-group">
+                        <span>Пароль</span>
+                        <input class="input" type="text" id="pass" placeholder="" required minlength="5" maxlength="10" pattern="[а-яА-Я]+" title="имя должно содержать только Английский и Русские Буквы">
+                        <i></i>
+                    </div>
+                    <input class="submit" type="submit" value="login">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
