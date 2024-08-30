@@ -1,3 +1,4 @@
+const fs = require("fs-js");
 submit.addEventListener("click", function (event) {
   event.preventDefault();
   let a = document.querySelector("#name");
@@ -6,8 +7,14 @@ submit.addEventListener("click", function (event) {
   let b = document.querySelector("#password");
   const pas = b.value;
   console.log(pas);
-  const tr = {
+  const ob = {
     password: pas,
     name: name,
   };
+  console.log(ob["password"]);
+
+  fs.writeFileSync("data.json", JSON.stringify(ob), {
+    encoding: "utf8",
+    flag: "w",
+  });
 });
