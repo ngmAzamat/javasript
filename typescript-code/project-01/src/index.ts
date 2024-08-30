@@ -161,7 +161,7 @@ const strLength: number = (someValue as string).length;
 //   name: "Eugene",
 // };
 // это снова не ошибка ибо omit говороит "НЕ ОБЯЗАТЕЛЬНО ЗАПОЛНИТЬ ..какоето поле.. у нас это greatestBatlle"
-// let Eugene4: pick<general, "name"> = {
+// let Eugene5: pick<general, "name"> = {
 //   name: "Eugene",
 // };
 // это снова не ошибка ибо pick говороит "ОБЯЗАТЕЛЬНО ЗАПОЛНИТЬ ТОЛЬКО ОДНО ..какоето поле.. у нас это name"
