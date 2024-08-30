@@ -136,3 +136,32 @@ const profiles1: Profile1 = {} as Profile1;
 
 const someValue: any = "hDLUUYLELGBJLewnm45612S";
 const strLength: number = (someValue as string).length;
+
+// что-то
+// зачем нужны
+// пример:
+// interface general {
+//   name: string;
+//   greatestBatlle: string;
+// }
+// let Eugene1: general = {
+//   name: "Eugene",
+//   greatestBatlle: "zenta",
+// };
+// это не ошибка
+// let Eugene2: general = {
+//   name: "Eugene",
+// };
+// а это ошибка ибо надо заполнить все поля не только name
+// let Eugene3: partial<general> = {
+//   name: "Eugene",
+// };
+// это снова не ошибка ибо parital говороит "НЕ ОБЯЗАТЕЛЬНО ЗАПОЛНИТЬ ВСЕ ПОЛЯ"
+// let Eugene4: omit<general, "greatestBatlle"> = {
+//   name: "Eugene",
+// };
+// это снова не ошибка ибо omit говороит "НЕ ОБЯЗАТЕЛЬНО ЗАПОЛНИТЬ ..какоето поле.. у нас это greatestBatlle"
+// let Eugene4: pick<general, "name"> = {
+//   name: "Eugene",
+// };
+// это снова не ошибка ибо pick говороит "ОБЯЗАТЕЛЬНО ЗАПОЛНИТЬ ТОЛЬКО ОДНО ..какоето поле.. у нас это name"
