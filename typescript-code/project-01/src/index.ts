@@ -99,6 +99,12 @@ enum names {
 console.log(names.CharleMange);
 
 // types(типы)
+// зачем нужны:
+// у нас 10 обьектов
+// вверхняя часть(там где name:string) одинакова
+// различается нижняя часть(там где name:"max")
+// получается мы что 10 пишем name:string
+// а ведь можно type name = { name: string}
 
 type strNum = string | number;
 
@@ -125,3 +131,8 @@ interface ages1 {
 }
 
 const profiles1: Profile1 = {} as Profile1;
+
+// утверждения(assertions)
+
+const someValue: any = "hDLUUYLELGBJLewnm45612S";
+const strLength: number = (someValue as string).length;

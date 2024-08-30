@@ -74,3 +74,6 @@ var names;
 console.log(names.CharleMange);
 const profiles = {};
 const profiles1 = {};
+// утверждения(assertions)
+const someValue = "hDLUUYLELGBJLewnm45612S";
+const strLength = someValue.length;
