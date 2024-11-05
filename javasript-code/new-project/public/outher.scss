@@ -1,0 +1,35 @@
+.border-line {
+  &::before {
+    @include border-animation();
+    @include border-red();
+    animation-delay: -1.5s;
+  }
+  &::after {
+    @include border-animation();
+    @include border-red();
+    animation-delay: -4.5s;
+  }
+}
+
+@keyframes a {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #23242a;
+}

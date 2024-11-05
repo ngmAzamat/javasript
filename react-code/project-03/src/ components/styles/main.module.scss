@@ -1,0 +1,71 @@
+.box {
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+  height: 420px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  &::after {
+    @include border-animation();
+    @include border-aqua();
+
+    animation-delay: -3s;
+  }
+  &::before {
+    @include border-animation();
+    @include border-aqua();
+  }
+  form {
+    position: absolute;
+    inset: 4px;
+    border-radius: 8px;
+    background-color: #222;
+    padding: 50px 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    .inputBox {
+      position: relative;
+      width: 300px;
+      margin-top: 35px;
+      span {
+        position: absolute;
+        left: 0;
+        padding: 20px 10px 10px;
+        transition: 0.5s;
+        pointer-events: none;
+        color: #8f8f8f;
+      }
+
+      input {
+        position: relative;
+        width: 100%;
+        padding: 20px 10px 10px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        color: #23242a;
+        background-color: transparent;
+        transition: 0.5s;
+        z-index: 10;
+        &:valid ~ span,
+        &:focus ~ span {
+          color: #fff;
+          font-size: 0.75em;
+          transform: translateY(-34px);
+        }
+
+        &:valid ~ i,
+        &:focus ~ i {
+          height: 44px;
+        }
+      }
+    }
+    h2 {
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 0.1em;
+    }
+  }
+}

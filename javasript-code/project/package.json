@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node --test",
     "build": "esbuild src/index.js --bundle --outfile=public/index.js"

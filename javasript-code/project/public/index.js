@@ -1,3 +1,4 @@
+"use strict";
 (() => {
   // node_modules/color-name/index.js
   var color_name_default = {
@@ -151,18 +152,20 @@
     yellowgreen: [154, 205, 50]
   };
 
-  // src/func.js
-  function getMessage() {
-    const msg = "Salam Aleikim!";
-    return msg;
-  }
-
   // src/index.js
-  function main() {
-    const msg = getMessage();
-    console.log(msg);
-    const arr = color_name_default.red;
-    console.log(arr);
-  }
-  document.addEventListener("DOMContentLoaded", main);
+  var btn = document.querySelector("button");
+  btn.addEventListener("click", () => {
+    const a = document.getElementById("id");
+    const text = document.getElementById("text");
+    const colorname = text.value;
+    const colorCode = color_name_default[colorname];
+    if (!colorCode) {
+      console.log(`Color not found: ${colorname}`);
+    } else {
+      console.log(colorCode);
+      a.innerHTML = `<div>${colorname}</div>`;
+      a.innerHTML = `<div>${colorCode}</div>`;
+      a.style.backgroundColor = `rgb(${colorCode})`;
+    }
+  });
 })();

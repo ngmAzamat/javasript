@@ -1,0 +1,29 @@
+.select {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.select::after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #999 transparent transparent transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  margin-top: -3px;
+}
+.select select {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  background: none;
+  border: 1px solid silver;
+  appearance: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #444;
+  background-color: #fff;
+}

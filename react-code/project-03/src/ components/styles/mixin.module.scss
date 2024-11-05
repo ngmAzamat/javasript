@@ -1,0 +1,34 @@
+@mixin border-animation {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  z-index: 1;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  animation: a 6s linear infinite;
+}
+
+@mixin border-red {
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    transparent,
+    #ff2770,
+    #ff2770,
+    #ff2770
+  );
+}
+@mixin border-aqua {
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    transparent,
+    #45f3f3,
+    #45f3f3,
+    #45f3f3
+  );
+}

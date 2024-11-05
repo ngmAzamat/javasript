@@ -137,6 +137,22 @@ const profiles1: Profile1 = {} as Profile1;
 const someValue: any = "hDLUUYLELGBJLewnm45612S";
 const strLength: number = (someValue as string).length;
 
+// namespace (пронстранство для имен переменных)
+//зачем нужно :
+// вы сделали const PI = 3.1415
+// а потом const PI = 3.14
+// ошибка нельзя две переменнои с одинаковами названиями
+// но ведь можно сделать const PI = 3.1415 не глобальном
+// можно его запихать в function но нет смысла это делать
+// запихать в namespace РЕШЕНИЕ!
+
+namespace a {
+  const PI: number = 3.1415;
+  export const pi: number = 3;
+}
+console.log(a.pi);
+const PI: number = 3.14;
+
 // что-то
 // зачем нужны
 // пример:

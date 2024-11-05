@@ -1,0 +1,120 @@
+.button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #fafafa;
+  position: relative;
+  border-radius: 12px;
+  z-index: 0;
+
+  &:hover::before {
+    opacity: 1;
+  }
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    animation: pricas_66 20s infinite linear;
+    transition: opasity 0.3s ease-in-out;
+    height: calc(100% + 4px);
+    filter: blur(8px);
+  }
+
+  &:active {
+    color: #000;
+    font-weight: bold;
+
+    &::after {
+      background: transparent;
+    }
+  }
+}
+
+.buttons {
+  margin-top: 20px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #fafafa;
+  position: relative;
+  border-radius: 12px;
+  z-index: 0;
+
+  &:hover::before {
+    opacity: 1;
+  }
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #ff00ff, aqua);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(45deg, #ff00ff, aqua);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    animation: pricas-66 20s infinite linear;
+    transition: opasity 0.3s ease-in-out;
+    height: calc(100% + 4px);
+    filter: blur(8px);
+  }
+  &:active {
+    color: #000;
+    font-weight: bold;
+
+    &::after {
+      background: transparent;
+    }
+  }
+}
+
+@keyframes Pricas-66 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
